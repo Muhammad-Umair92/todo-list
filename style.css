@@ -1,0 +1,27 @@
+li>p{
+    display:inline;
+}
+li{
+    background-color: white;
+}
+body {
+    background-color: black;
+    background-image: url("to-do.jpg");
+    text-align: center;
+}
+ul li{
+    /*margin-left: auto;*/
+    margin: auto;
+    width: 40%;
+    height: 40px;
+
+}
+ul button{
+    margin-left: 100%;
+}
+#task{
+    font-size: large;
+}
+p{
+    font-size: xx-large;
+}
