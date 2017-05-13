@@ -22,9 +22,17 @@ function condition() {
 function addTask() {
 
     if (userInput.value == ""){dis()}
+    var list = document.createElement("A");
+
+    var chk = document.createElement("INPUT");
+    chk.setAttribute("type", "checkbox");
+    chk.setAttribute("Class", "form-control");
+    chk.setAttribute("id", "chk_box");
+    chk.setAttribute("onclick", "done()");
+    var chkBox = list.appendChild(chk);
 
     var para = document.createElement("P"),
-        list = document.createElement("LI"),
+
         ranNum = Math.random().toString(),
         id = ranNum.substring(2, 14);
 
@@ -33,6 +41,8 @@ function addTask() {
 
     var tasks = document.getElementById("list");
     tasks.appendChild(list);
+    var br = document.createElement("BR");
+    tasks.appendChild(br);
     list.appendChild(para);
     list.setAttribute("id", id);
 
@@ -42,17 +52,12 @@ function addTask() {
     list.appendChild(btnDiv);
     btnDiv.setAttribute("Class","btn_Div");
 
-    var btnX = document.createElement("BUTTON"),
+    var btnX = document.createElement("A"),
         btnXVal = document.createTextNode(""),
-        btnEdit = document.createElement("BUTTON"),
+        btnEdit = document.createElement("A"),
         btnEditVal = document.createTextNode("");
 
-    var chk = document.createElement("INPUT");
-    chk.setAttribute("type", "checkbox");
-    chk.setAttribute("Class", "form-control");
-    chk.setAttribute("id", "chk_box");
-    chk.setAttribute("onclick", "done()");
-    var chkBox = list.children[1].appendChild(chk);
+
 
     btnX.appendChild(btnXVal);
     btnDiv.appendChild(btnX);
@@ -135,7 +140,7 @@ function enable() {
     var dis = document.getElementById("list").getElementsByTagName("INPUT");
     for (var i = 0; i < dis.length; i++) {
         dis[i].disabled = false;}
-    var dis = document.getElementById("list").getElementsByTagName("BUTTON");
+    var dis = document.getElementById("list").getElementsByTagName("A");
     for (var i = 0; i < dis.length; i++) {
         dis[i].disabled = false;
     }
@@ -143,10 +148,10 @@ function enable() {
 
 function done(){
     //var chkTarget = event.target;
-    if (event.target.checked == true){
+    if (event.target.checked){
         var chkTarget = event.target,
             chked = chkTarget.parentElement.previousSibling;
-        chked.setAttribute("Class","chked_txt");
+        //chked.setAttribute("Class","chked_txt");
 
         chkTarget.parentElement.parentElement.setAttribute("Class","chked_li");
 
