@@ -1,27 +1,70 @@
-li>p{
-    display:inline;
-}
-li{
-    background-color: white;
-}
+/*li>p{*/
+    /*display:inline-block;*/
+/*}*/
+/*li{*/
+    /*background-color: white;*/
+/*}*/
 body {
     background-color: black;
     background-image: url("to-do.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;;
     text-align: center;
 }
-ul li{
-    /*margin-left: auto;*/
-    margin: auto;
-    width: 40%;
-    height: 40px;
+h1 {
+    border-style: solid;
+    border-width: 0px 0px 10px 0px;
+}
+ul{
+    /*child-align: ;*/
+    /*width: 30%;*/
+    /*height: ;*/
+    padding: 0;
 
 }
-ul button{
-    margin-left: 100%;
-}
+/*ul button{*/
+    /*margin-left: 100%;*/
+
+/*}*/
 #task{
     font-size: large;
 }
 p{
+    margin: 0;
     font-size: xx-large;
+    width: 70%;
+    background-color: white;
+    display: inline-block;
+    overflow: auto;
 }
+li[id^="back"]{
+    background-color: yellow;
+}
+#main{
+    width: 400px;
+    height: 600px;
+    margin: auto;
+    margin-top: 5%;
+    border: solid;
+    background-color: white;
+    box-shadow: 0px 0px 7px 11px black;
+    overflow: auto;
+
+}
+.high{
+    background-color: aliceblue;
+}
+.btn_Div{
+    display: inline-block;
+}
+
+.chked_txt{
+    text-decoration: line-through;
+}
+
+/*li{*/
+/*border: solid;*/
+/*}*/
+
